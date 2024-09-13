@@ -416,6 +416,8 @@ function setupTestCase(TestCaseParams memory params)
         params.currentTick
     );
 
+    shouldTransferInCallback = params.shouldTransferInCallback;
+
     if (params.mintLiqudity) {
         (poolBalance0, poolBalance1) = pool.mint(
             address(this),
@@ -425,7 +427,6 @@ function setupTestCase(TestCaseParams memory params)
         );
     }
 
-    shouldTransferInCallback = params.shouldTransferInCallback;
 }
 ```
 In this function, we're minting tokens and deploying a pool. Also, when the `mintLiquidity` flag is set, we mint liquidity in the pool. In the end, we're setting the `shouldTransferInCallback` flag for it to be read in the mint callback:
