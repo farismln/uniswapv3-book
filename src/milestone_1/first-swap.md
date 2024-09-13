@@ -153,7 +153,7 @@ function testSwapBuyEth() public {
         liquidity: 1517882343751509868544,
         currentSqrtP: 5602277097478614198912276234240,
         shouldTransferInCallback: true,
-        mintLiqudity: true
+        mintLiquidity: true
     });
     (uint256 poolBalance0, uint256 poolBalance1) = setupTestCase(params);
 

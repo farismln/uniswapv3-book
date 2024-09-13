@@ -391,7 +391,7 @@ function testMintSuccess() public {
         liquidity: 1517882343751509868544,
         currentSqrtP: 5602277097478614198912276234240,
         shouldTransferInCallback: true,
-        mintLiqudity: true
+        mintLiquidity: true
     });
 ```
 1. We're planning to deposit 1 ETH and 5000 USDC into the pool.
@@ -418,7 +418,7 @@ function setupTestCase(TestCaseParams memory params)
 
     shouldTransferInCallback = params.shouldTransferInCallback;
 
-    if (params.mintLiqudity) {
+    if (params.mintLiquidity) {
         (poolBalance0, poolBalance1) = pool.mint(
             address(this),
             params.lowerTick,
